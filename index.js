@@ -16,6 +16,7 @@ app.get('/led', function (req, res) {
                 throw err;
             }
             console.log('Command ' + command + ' sent to pin ' + pin);
+            res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
             res.status(200).end();
         });
     });
