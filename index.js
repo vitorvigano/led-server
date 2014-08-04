@@ -15,8 +15,8 @@ app.get('/led', function (req, res) {
             if (err) {
                 throw err;
             }
-            console.log('Command ' + command + 'Sent to pin ' + pin);
-            res.send(200);
+            console.log('Command ' + command + ' sent to pin ' + pin);
+            res.status(200).end();
         });
     });
 });
